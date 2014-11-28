@@ -13,7 +13,7 @@
   <% @patients.each do |patient| %>
     <tr>
       <td><%= link_to full_name(patient), patient %></td>
-      <td><%= link_to "Destroy", root_path, method: :delete, data: {confirm: "Are You Sure?"} %></td>
+      <td><%= link_to "Destroy", patient_path(id:patient.id), method: :delete, data: {confirm: "Are You Sure?"} %></td>
     </tr>
   <% end %>
   </tbody>
